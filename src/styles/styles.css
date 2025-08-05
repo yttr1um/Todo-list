@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 *:not(dialog)  {
     margin: 0;
     padding: 0;
@@ -64,12 +66,16 @@ header {
 }
 
 .note {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
     padding: 10px;
-    color: black;
     text-align: center;
+}
+
+.note > * {
+    font-family: "Shadows Into Light", cursive;
+    color: black;
 }
 
 .main-content > button {
