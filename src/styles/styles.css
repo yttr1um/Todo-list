@@ -55,7 +55,8 @@ header {
 }
 
 .main-content {
-    background-color: #7b7a7a;
+    background-image: url("../images/granite-texture.jpg");
+    background-size: contain;
     position: relative;
 }
 
