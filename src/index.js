@@ -1,4 +1,5 @@
-import { addNoteBtn, openModal, closeModalBtn, closeModal, title, text} from "./modal";
+//TODO: there has to be a better way
+import { addNoteBtn, openModal, closeModalBtn, closeModal, title, text } from "./modal";
 
 import "./styles/styles.css";
 import "./styles/modal.css";
