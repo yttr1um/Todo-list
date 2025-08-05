@@ -14,9 +14,13 @@ function addProject(name) {
 }
 
 function addNote(text) {
+    const colors = ["#FB64B6", "#21BCFF", "#FFDF20", "#7CCF35"];
+    const randIndex = Math.floor(Math.random() * 4)
+
     const note = document.createElement("div");
     note.textContent = text;
     note.classList.add("note");
+    note.style.backgroundColor = colors[randIndex];
     notes.appendChild(note);
 }
 
