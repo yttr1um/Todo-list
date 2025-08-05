@@ -18,7 +18,24 @@
         </div>
     </div>
     <div class="main-content">
-        <div class="notes"></div>
+        <div class="notes">
+            <dialog id="modal">
+                <form action="">
+                    <div>
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" placeholder="Enter Title..." required>
+                    </div>
+
+                    <div>
+                        <label for="text">Text:</label>
+                        <input type="text" id="text" placeholder="Enter Text..." required>
+                    </div>
+
+                    <button type="submit" id="submit-btn">Add Note</button>
+                </form>
+                <button type="button" id="close-modal">Close</button>
+            </dialog>
+        </div>
         <button>&plus;</button>
     </div>
     <footer>
