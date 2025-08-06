@@ -1,0 +1,33 @@
+.notes {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.note {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.note > * {
+    font-family: "Gloria Hallelujah", cursive;
+    color: black;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.note input {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.note textarea {
+    flex: 1;
+    resize: none;
+}
