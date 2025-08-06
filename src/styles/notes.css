@@ -11,9 +11,19 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.note > * {
+.note .pin {
+    height: 25px;
+    width: 25px;
+    align-self: center;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.note input,
+.note textarea {
     font-family: "Gloria Hallelujah", cursive;
     color: black;
     background: transparent;

@@ -9,12 +9,16 @@ export function createNote() {
     note.classList.add("note");
     note.style.backgroundColor = colors[randIndex];
 
+    const pin = document.createElement("div");
+    pin.classList.add("pin");
+
     const noteTitle = document.createElement("input");
     noteTitle.placeholder = "Note title";
 
     const noteText = document.createElement("textarea");
     noteText.placeholder = "Enter text here...";
 
+    note.appendChild(pin);
     note.appendChild(noteTitle);
     note.appendChild(noteText);
 
