@@ -1,4 +1,4 @@
-const notes = document.querySelector(".notes");
+const notesContainer = document.querySelector(".notes-container");
 export const addNoteBtn = document.querySelector(".main-content > button");
 
 export function createNote() {
@@ -22,5 +22,5 @@ export function createNote() {
     note.appendChild(noteTitle);
     note.appendChild(noteText);
 
-    notes.appendChild(note);
+    notesContainer.appendChild(note);
 }
