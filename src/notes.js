@@ -1,4 +1,5 @@
 const notesContainer = document.querySelector(".notes-container");
+let z = 1;
 export const addNoteBtn = document.querySelector(".main-content > button");
 
 export function createNote() {
@@ -7,6 +8,8 @@ export function createNote() {
 
     const note = document.createElement("div");
     note.classList.add("note");
+    z = z + 1;
+    note.style.zIndex = z;
     note.style.backgroundColor = colors[randIndex];
 
     const pin = document.createElement("div");
@@ -29,7 +32,6 @@ export function createNote() {
 
 export function move(note) {
     const pin = note.querySelector(".pin");
-    let z = 1;
 
     note.addEventListener("mousedown", () => {
         z = z + 1;
