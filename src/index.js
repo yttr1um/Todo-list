@@ -1,8 +1,4 @@
-//TODO: there has to be a better way
-import { addNoteBtn, openModal, closeModalBtn, closeModal, title, text } from "./modal";
-
 import "./styles/styles.css";
-import "./styles/modal.css";
 
 const sidebar = document.querySelector(".sidebar");
 const addPrjBtn = document.querySelector(".add-project-btn");
