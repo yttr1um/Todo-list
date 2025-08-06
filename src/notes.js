@@ -23,4 +23,42 @@ export function createNote() {
     note.appendChild(noteText);
 
     notesContainer.appendChild(note);
+
+    move(note);
+}
+
+export function move(note) {
+    const pin = note.querySelector(".pin");
+    let z = 1;
+
+    note.addEventListener("mousedown", () => {
+        z = z + 1;
+        note.style.zIndex = z;
+    })
+
+    pin.addEventListener("mousedown", e => { 
+        note.classList.add('is-dragging');
+
+        let l = note.offsetLeft;
+        let t = note.offsetTop;
+
+        let startX = e.pageX;
+        let startY = e.pageY;
+
+        const drag = (e) => { 
+            e.preventDefault();
+            note.style.left = l + (e.pageX - startX) + "px";
+            note.style.top = t + (e.pageY - startY) + "px";
+        };
+        
+        const mouseup = () => { 
+            note.classList.remove('is-dragging');
+
+            document.removeEventListener("mousemove", drag);
+            document.removeEventListener("mouseup", mouseup);
+        };
+        
+        document.addEventListener("mousemove", drag);
+        document.addEventListener("mouseup", mouseup);
+    });
 }
