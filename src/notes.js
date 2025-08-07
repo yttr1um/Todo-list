@@ -50,8 +50,20 @@ export function move(note) {
 
         const drag = (e) => { 
             e.preventDefault();
-            note.style.left = l + (e.pageX - startX) + "px";
-            note.style.top = t + (e.pageY - startY) + "px";
+
+            let newLeft = l + (e.pageX - startX);
+            let newTop = t + (e.pageY - startY);
+
+            const containerRect = container.getBoundingClientRect();
+
+            const maxLeft = containerRect.width - note.offsetWidth;
+            const maxTop = containerRect.height - note.offsetHeight;
+
+            newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+            newTop = Math.max(0, Math.min(newTop, maxTop));
+
+            note.style.left = newLeft + "px";
+            note.style.top = newTop + "px";
         };
         
         const mouseup = () => { 
