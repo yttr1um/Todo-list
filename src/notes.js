@@ -6,11 +6,14 @@ export function createNote() {
     const colors = ["#FB64B6", "#21BCFF", "#FFDF20", "#7CCF35"];
     const randIndex = Math.floor(Math.random() * 4);
 
+    const randDeg = Math.floor(Math.random() * 6) -6;
+
     const note = document.createElement("div");
     note.classList.add("note");
     z = z + 1;
     note.style.zIndex = z;
     note.style.backgroundColor = colors[randIndex];
+    note.style.transform = `rotate(${randDeg}deg)`;
 
     const pin = document.createElement("div");
     pin.classList.add("pin");
@@ -55,7 +58,6 @@ export function move(note) {
             let newTop = t + (e.pageY - startY);
 
             const containerRect = container.getBoundingClientRect();
-
             const maxLeft = containerRect.width - note.offsetWidth;
             const maxTop = containerRect.height - note.offsetHeight;
 
