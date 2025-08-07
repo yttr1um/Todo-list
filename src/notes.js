@@ -32,6 +32,7 @@ export function createNote() {
 
 export function move(note) {
     const pin = note.querySelector(".pin");
+    const container = document.querySelector(".notes-container");
 
     note.addEventListener("mousedown", () => {
         z = z + 1;
@@ -55,12 +56,11 @@ export function move(note) {
         
         const mouseup = () => { 
             note.classList.remove('is-dragging');
-
-            document.removeEventListener("mousemove", drag);
-            document.removeEventListener("mouseup", mouseup);
+            container.removeEventListener("mousemove", drag);
+            container.removeEventListener("mouseup", mouseup);
         };
         
-        document.addEventListener("mousemove", drag);
-        document.addEventListener("mouseup", mouseup);
+        container.addEventListener("mousemove", drag);
+        container.addEventListener("mouseup", mouseup);
     });
 }
