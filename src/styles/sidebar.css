@@ -1,0 +1,48 @@
+.sidebar {
+    margin: 10px;
+    background-color: whitesmoke;
+    background-image: url("../images/paper-texture.jpg");
+    position: relative;
+    padding: 10px;
+    z-index: var(--max-z-index);
+    box-shadow: rgba(0, 0, 0, 0.29) 0 7px 15px,
+    rgba(0, 0, 0, 0.33) 0 6px 6px;
+}
+
+.sidebar .staple-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.staple {
+    height: 5px;
+    width: 75px;
+    background-color: rgb(161, 160, 160);
+    border-radius: 15%;
+}
+
+.sidebar .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sidebar .content > * {
+    flex: 1;
+    padding: 0;
+    border-bottom: 2px solid rgb(165, 165, 165);
+}
+
+/* Title */
+.content>*:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.content >*:last-child {
+    border: none;
+    color: rgb(137, 137, 137);
+}
