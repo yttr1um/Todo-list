@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-*:not(dialog)  {
+*  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,11 +17,26 @@ body {
 
 .sidebar {
     background-color: #4c4747;
+    position: relative;
+    padding: 10px;
+    font-family: "Abril Fatface", serif;
+}
+
+.sidebar > h1 {
+    font-size: 3rem;
+}
+
+.sidebar #credit {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 10px;
+    color: rgb(134, 134, 134);
 }
 
 .projects-list {
     width: 100%;
-    padding: 10px 0;
+    padding-top: 20px;
 }
 
 .projects-title {
@@ -45,6 +61,11 @@ body {
 
 .project {
     margin-left: 35px;
+}
+
+.project:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .main-content {
