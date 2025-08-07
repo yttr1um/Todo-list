@@ -26,21 +26,29 @@ body {
     position: relative;
 }
 
-.main-content > button {
+.main-content .button {
     position: absolute;
     bottom: 0;
     right: 0;
     margin: 10px;
-    padding: 10px 20px;
-    background-color: #4c4747;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.5rem;
+    height: 75px;
+    width: 75px;
+    background-color: #0056c7;
+    border-radius: 50%;
     cursor: pointer;
     z-index: var(--max-z-index);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button span {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .main-content > button:hover {
-    background-color: #474242;
+    background-color: #0049a8;
 }

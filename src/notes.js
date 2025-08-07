@@ -1,12 +1,12 @@
 const notesContainer = document.querySelector(".notes-container");
 let z = 1;
-export const addNoteBtn = document.querySelector(".main-content > button");
+export const addNoteBtn = document.querySelector(".button");
 
 export function createNote() {
     const colors = ["#FB64B6", "#21BCFF", "#FFDF20", "#7CCF35"];
     const randIndex = Math.floor(Math.random() * 4);
 
-    const randDeg = Math.floor(Math.random() * 6) -6;
+    const randDeg = Math.floor(Math.random() * 6) - 6;
 
     const note = document.createElement("div");
     note.classList.add("note");
