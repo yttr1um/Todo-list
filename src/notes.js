@@ -6,7 +6,7 @@ export function createNote() {
     const colors = ["#FB64B6", "#21BCFF", "#FFDF20", "#7CCF35"];
     const randIndex = Math.floor(Math.random() * 4);
 
-    const randDeg = Math.floor(Math.random() * 6) - 6;
+    const randDeg = Math.floor(Math.random() * 6) - 3;
 
     const note = document.createElement("div");
     note.classList.add("note");
@@ -24,9 +24,44 @@ export function createNote() {
     const noteText = document.createElement("textarea");
     noteText.placeholder = "Enter text here...";
 
+    const dateContainer = document.createElement("div");
+
+    const dateLabel = document.createElement("label");
+    dateLabel.for = "date";
+    dateLabel.textContent = "Due date: "
+
+    const noteDate = document.createElement("input");
+    noteDate.type = "date";
+    noteDate.id = "date";
+
+    dateContainer.appendChild(dateLabel);
+    dateContainer.appendChild(noteDate);
+
+    const priorityLabel = document.createElement("div");
+    priorityLabel.textContent = "Priority: ";
+
+    const notePriorityContainer = document.createElement("div");
+    notePriorityContainer.classList.add("priority-container");
+
+    const lowPriority = document.createElement("button");
+    lowPriority.textContent = "low";
+
+    const midPriority = document.createElement("button");
+    midPriority.textContent = "medium";
+
+    const highPriority = document.createElement("button");
+    highPriority.textContent = "high";
+
+    notePriorityContainer.appendChild(lowPriority);
+    notePriorityContainer.appendChild(midPriority);
+    notePriorityContainer.appendChild(highPriority);
+
     note.appendChild(pin);
     note.appendChild(noteTitle);
     note.appendChild(noteText);
+    note.appendChild(dateContainer);
+    note.appendChild(priorityLabel);
+    note.appendChild(notePriorityContainer);
 
     notesContainer.appendChild(note);
 
