@@ -30,6 +30,28 @@
     justify-content: space-evenly;
 }
 
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-project-btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    background: none;
+    border:none;
+}
+
+.add-project-btn:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.project:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .sidebar .content > * {
     flex: 1;
     padding: 0;
