@@ -4,20 +4,29 @@ import "./styles/sidebar.css";
 
 import { addNoteBtn, createNote} from "./notes";
 
-//const sidebar = document.querySelector(".sidebar");
-//const addPrjBtn = document.querySelector(".add-project-btn");
+const sidebar = document.querySelector(".sidebar");
+const addPrjBtn = document.querySelector(".add-project-btn");
 
-// function addProject(name) {
-//     const project = document.createElement("div");
-//     project.textContent = name;
-//     project.classList.add('project');
-//     sidebar.appendChild(project);
-// }
+const projects = Array.from(document.querySelectorAll('.project'));
+let i = 0;
 
-// addPrjBtn.addEventListener("click", () => {
-//     let name = prompt("Add project name: ");
-//     addProject(name);
-// });
+function addProject(name) {
+    if (i < projects.length) {
+        if (projects[i].textContent.length == 0) {
+            projects[i].textContent = "----- " + name;
+            i = i + 1;
+        }
+    }
+
+    else {
+        alert("no");
+    }
+}
+
+addPrjBtn.addEventListener("click", () => {
+    let name = prompt("Add project name: ");
+    addProject(name);
+});
 
 addNoteBtn.addEventListener("click", () => {
     createNote();
